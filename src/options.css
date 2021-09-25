@@ -1,0 +1,111 @@
+html {
+	min-width: 550px;
+	overflow-x: hidden; /* Required to hide horizontal scroll on Firefox */
+}
+
+/* For use with screen readers */
+.sr-only {
+	display: none;
+}
+
+/* Hide spinbox for number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+input[type="number"],
+input[type="text"] {
+	padding: 0.25rem 0.375rem;
+}
+
+.options {
+	display: flex;
+}
+
+.options-inputs {
+	flex: 1;
+}
+
+.options-input {
+	display: flex;
+	padding: 0.25rem;
+	align-items: center;
+}
+
+.options-input input[type="checkbox"] {
+	flex: 1;
+	margin: 0 0.5rem;
+}
+
+.checkbox-container {
+	position: relative;
+	display: flex;
+	margin-left: 10px;
+}
+
+.checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+	background-color: #048241;
+}
+
+.checkmark:after {
+	content: "";
+	top: 0;
+	left: 0;
+	display: none;
+	position: absolute;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.options-input input[type="number"] {
+	width: calc(3ch + 1rem);
+}
+
+/* Firefox only */
+.only-firefox {
+	display: none;
+}
+
+@-moz-document url-prefix('') {
+	.only-firefox {
+		display: block;
+	}
+}

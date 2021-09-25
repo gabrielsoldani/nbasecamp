@@ -3,7 +3,7 @@ env:
 
 name: Release
 on:
-  - push
+  workflow_dispatch: null
 jobs:
   Version:
     outputs:

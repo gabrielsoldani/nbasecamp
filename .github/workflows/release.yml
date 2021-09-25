@@ -1,9 +1,5 @@
 env:
-  DIRECTORY: distribution
-
-# FILE GENERATED WITH: npx ghat fregante/ghatemplates/webext
-# SOURCE: https://github.com/fregante/ghatemplates
-# OPTIONS: {"exclude":["on.schedule"]}
+  DIRECTORY: dist
 
 name: Release
 on:
